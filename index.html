@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Traffic</title>
+    <link rel="web icon" type="jpg" href="favicon.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Courier New', Courier, ;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #232C3B;
+
+    opacity: 1;
+    padding-left: 60px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+
+    background-color: #eb6235;
+    color: #232C3B;
+    font-weight: initial;
+    box-shadow: 0px 0px 5px 2px whitesmoke;
+    transition: 0.8s;
+}
+
+a#icons:hover {
+    background-color: #eb6235;
+    color: #232C3B;
+
+    box-shadow: 0px 0px 5px 2px whitesmoke;
+    transition: 0.8s;
+    border-radius: 10%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+div.header {
+    background-image: url('header.jpg');
+}
+
+h1.header-heading {
+    color: white;
+    margin-left: 60px;
+    margin-right: 60px;
+
+    font-size: 40px;
+}
+
+p.header-paragraph {
+    color: white;
+    margin-left: 60px;
+    margin-right: 60px;
+
+    font-size: 20px;
+}
+
+div.button {
+    display: inline-block;
+}
+
+a.button1 {
+    text-decoration: none;
+    background-color: #232C3B;
+    color: white;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+    border-radius: 5px;
+
+
+}
+
+a.button1:hover {
+    color: #232C3B;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    transition: 0.8s;
+    box-shadow: 0px 0px 5px 2px #232C3B;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+}
+
+.paragraph {
+    padding: 10px;
+}
+
+.image {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 100%;
+    }
+}
+
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+div.infinity {
+    background-color: #F9F9F9;
+}
+
+a.get_button {
+    text-decoration: none;
+    background-color: #232C3B;
+    color: white;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+    border-radius: 5px;
+
+
+}
+a.get_button:hover {
+    color: #ffffff;
+    background-color: #eb6235;
+    border-radius: 5px;
+    transition: 0.8s;
+    box-shadow: 0px 0px 5px 2px #eb6235;
+}
+div.services{
+background-color: #F9F9F9;
+}
+
+
+
+
+
+
+footer {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 2em;
+background-color: #232C3B;
+
+}
+
+.about, .links, .contact {
+width: calc(33.33% - 1em);
+padding: 1em;
+}
+
+@media (max-width: 768px) {
+.about, .links, .contact {
+width: 100%;
+text-align: center;
+}
+}
+
+a.footer-links{
+text-decoration: none;
+
+}
+a.footer-links:hover{
+transition: 0.5s;
+color: #ffffff;
+}
+input.contact-input-types, textarea.contact-input-types, button.contact-input-types{border-radius:10px; border: solid #293446;  background-color: #232C3B; width: 90%; margin-top: 20px;padding: 10px;}
+
+
+input.contact-input-types:focus{
+/* border: 3px solid #eb6235; */
+transition: 0.8s;
+box-shadow: 0px 0px 3px 2px whitesmoke;
+} textarea.contact-input-types:focus{
+/* border: 3px solid #eb6235; */
+transition: 0.8s;
+box-shadow: 0px 0px 3px 2px whitesmoke;
+} 
+button.contact-input-types:focus {
+/* border: 3px solid #eb6235; */
+transition: 0.8s;
+
+box-shadow: 0px 0px 3px 2px whitesmoke;
+}
+ 
+</style>
+
+
+
+<body>
+
+    <br>
+    <center>
+        <div>
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <br>
+        <br>
+    </center>
+    <center>
+        <div class="container row">
+            <div class="topnav" id="myTopnav"
+                style=" text-align:center;    border-radius: 10px 50px;        margin-bottom: 7px; ">
+
+                <a href="" class="active">
+                    Home
+                </a>
+                <a href="#">
+                    Course's
+                </a>
+                <a href="#">
+                    Services
+                </a>
+                <a href="#">
+                    About
+                </a>
+                <a href="#">
+                    Blog
+                </a>
+                <a href="#">
+                    Contact Us
+                </a>
+                <a href="#">
+                    Our Team
+                </a>
+                <a href="#">
+                    Portfolio
+                </a>
+                <a href="#" class="fa fa-facebook" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-whatsapp" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-twitter" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-instagram" id="icons" style="margin-top: 5px;"></a>
+                <!-- <a href="#" class="fa fa-youtube" id="icons" style="margin-top: 5px;"></a> -->
+                <a href="#" class="fa fa-snapchat" id="icons" style="margin-top: 5px;"></a>
+
+
+
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+        </div>
+    </center>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <center>
+        <div class="col-12 header">
+            <br>
+            <br>
+            <br>
+            <h1 class="header-heading">
+                <b>
+                    Internet Marketing Solutions
+                </b>
+                <br>
+                Fast and Affortable
+            </h1>
+            <br>
+            <p class="header-paragraph">
+                Do you want to improve the online visibility of your brand and drive more relevant traffic to your
+                website.
+                <br>
+                See how well your page is optimised for your keyword
+            </p>
+            <br>
+            <div class="button">
+                <a href="#" class="button1">
+                    LEARN MORE
+                </a>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </center>
+    <div class="col-12 first">
+        <br>
+        <br>
+        <center>
+            <h1 class="first-heading" style=" color: #232C3B; font-weight: bolder;">
+                What’s Your SEO Score ?
+            </h1>
+        </center>
+        <br>
+
+
+
+        <div class="container">
+            <div class="column paragraph">
+                <p style="color: rgb(114, 114, 114);">
+                    
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi elementum
+                    hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque tincidunt, quis
+                    pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue porta orci,
+                    eget fermentum dolor maximus vel. Maecenas et interdum enim. Quisque vel velit velit. Sed vel velit
+                    nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi elementum
+                    hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque tincidunt, quis
+                    pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue porta orci,
+                    eget fermentum dolor maximus vel. Maecenas et interdum enim. Quisque vel velit velit. Sed vel velit
+                    nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi elementum
+                    hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque tincidunt, quis
+                    pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue porta orci,
+                    eget fermentum dolor maximus vel. Maecenas et interdum enim. Quisque vel velit velit. Sed vel velit
+                    nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi elementum
+                    hendrerit justo, et gravida turpis consectetur a.
+                </p>
+            </div>
+            <div class="column image">
+                <img style="width: 100%;" class="image-responsive" src="image01.png" alt="Responsive Image">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="infinity">
+        <br>
+        <br>
+        <center>
+            <h1 style=" color: #232C3B; font-weight: bolder;">
+                Welcome To Infinity Solution
+            </h1>
+            <p style="color: rgb(114, 114, 114);">
+                Do you want to improve the online visibility of your brand and traffic to your website?
+
+            </p>
+        </center>
+        <div class="container ">
+            <div class=" row">
+                <div class="column">
+                    <br>
+                    <div class="card">
+                        <br>
+                        <center>
+                            <img src="icon-3.png" alt="" style="width:25%; height: 120px;">
+                        </center>
+                        <div class="container">
+                            <h4 style=" color: #232C3B; font-weight: bolder;">
+                                TECHNICAL SERVICE
+
+                            </h4>
+                            <br>
+                            <br>
+                            <p class="card-paragraph" style="color: rgb(114, 114, 114);">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi
+                                elementum
+                                hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque
+                                tincidunt, quis
+                                pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue
+                                porta orci,
+                                eget fermentum dolor maximus vel. Maecenas et interdum enim.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <br>
+                    <div class="card">
+                        <br>
+                        <center>
+                            <img src="icon-2.png" alt="" style="width:20%; height: 100px;">
+                        </center>
+                        <div class="container">
+
+                            <h4 style="margin-top:30px; color: #232C3B; font-weight: bolder;">
+                                KEYWORD TARGETING
+                            </h4>
+                            <br>
+                            <br>
+                            <p  class="card-paragraph" style="color: rgb(114, 114, 114);">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi
+                                elementum
+                                hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque
+                                tincidunt, quis
+                                pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue
+                                porta orci,
+                                eget fermentum dolor maximus vel. Maecenas et interdum enim..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container ">
+            <div class=" row">
+                <div class="column">
+                    <br>
+                    <div class="card">
+                        <br>
+                        <center>
+                            <img src="icon-1.png" alt="" style="width:25%; height: 120px;">
+                        </center>
+                        <div class="container">
+                            <h4 style=" color: #232C3B; font-weight: bolder;">
+                                WEB ANALYTICS
+                            </h4>
+                            <br>
+                            <br>
+                            <p  class="card-paragraph" style="color: rgb(114, 114, 114);">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi
+                                elementum
+                                hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque
+                                tincidunt, quis
+                                pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue
+                                porta orci,
+                                eget fermentum dolor maximus vel. Maecenas et interdum enim.
+                        </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <br>
+                    <div class="card">
+                        <br>
+                        <center>
+                            <img src="icon-4.png" alt="" style="width:20%; height: 100px;">
+                        </center>
+                        <div class="container">
+
+                            <h4 style="margin-top:30px; color: #232C3B; font-weight: bolder;">
+                                SUPPORT CENTER
+
+                            </h4>
+                            <br>
+                            <br>
+                            <p  class="card-paragraph" style="color: rgb(114, 114, 114);">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit nibh. Morbi
+                                elementum
+                                hendrerit justo, et gravida turpis consectetur a. Integer vestibulum urna et neque
+                                tincidunt, quis
+                                pharetra magna hendrerit. Suspendisse vel ex vel dui condimentum ornare. Donec congue
+                                porta orci,
+                                eget fermentum dolor maximus vel. Maecenas et interdum enim..
+
+                            </p>
+                           
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="column image">
+            <img style="width: 100%;" class="image-responsive" src="ipad.jpg" alt="Responsive Image">
+        </div>
+        <div class="column paragraph">
+
+            <h1 style="color: #232C3B; font-weight: bolder;">
+                Get Appear On the Front Page of Google!
+            </h1>
+            <br>
+            
+            <p style="color: rgb(114, 114, 114); font-size:small ;">
+                Monitor keyword rankings daily to strategise and forecast your digital marketing efforts. Track tens of thousands of keywords and manage valuable keyterms with easy-to-edit labels. intalyse Rankings also allows you to keep an eye on the with for comparison with your own keyword performance.
+                </p>
+            
+            <br>
+            <p  style="color: rgb(114, 114, 114);">
+            > We deliver Top Rankings.
+            <br>
+            <br>
+            > High customer retention rate.
+            <br>
+            <br>
+            > We always return e-mails and calls.
+            <br>
+            <br>
+
+            > Afordable pricing offers.
+        </p>
+        <br>
+        
+
+        <a class="get_button" href="#"> GET A QUOTE!</a>
+        </div>
+        
+    </div>
+<br><br>
+
+
+
+<div class="services">
+    <br>
+    <br>
+    <br>
+    <center>
+        <h1 style=" color: #232C3B; font-weight: bolder;">
+            What Services We Offer
+        </h1>
+        <p style="color: rgb(114, 114, 114);">
+            Do you want to improve the online visibility of your brand and drive more relevant
+            <br>
+             traffic to your website?
+
+        </p>
+        <br>
+        <br>
+        <br>
+
+        <img class="imagr-responsive" style="width:55%;" src="services-img.jpg" alt="">
+    </center>
+    
+</div>
+    
+
+
+
+<footer>
+    <div class="about">
+        <br>
+      <img src="logo-footer.png" alt="">
+      <br>
+      <br>
+      
+
+      <p style="color: rgb(114, 114, 114); font-size: small;" >
+        Aoluptas sit aspernatur aut odit aut fugit, sed elits quias consequuntur magni dolores eos qui ratione volust luptatem sequi nesciunt. 
+        
+    </p>
+    <br>
+    <br>
+
+<p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-map-marker"></i> &nbsp Rahim Yar Khan,Punjab, Pakistan. </p>
+<hr>
+<p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-envelope">
+</i> &nbspInwebicon@gmai.com  </p>
+<hr>
+<p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-phone"></i>
+</i> &nbsp+92 325 1136814</p>
+
+    </div>
+        <div class="links" style="color: rgb(114, 114, 114);font-size: small;">
+    <br>  <h3>SERVICE PROVIDED</h3>
+    <br> 
+        <a class="footer-links"  href="#"> > SEO Services</a><br> <br> 
+        <a class="footer-links"  href="#"> > Social Media</a><br> <br> 
+        <a class="footer-links"  href="#"> > Web Developement</a><br> <br> 
+        <a class="footer-links"  href="#"> > Blog Management</a><br> <br> 
+        <a class="footer-links"  href="#"> > Keyword Analytics</a><br> <br> 
+        <a class="footer-links"  href="#"> > Content Management</a><br> <br> 
+        <a class="footer-links"  href="#"> > Pay per click</a><br> <br> 
+        <a class="footer-links"  href="#"> > Virtual Marketing</a><br>
+
+      
+    </div>
+    <div class="contact" style="margin-top: 20px;">
+        
+      <h3 style="color: rgb(114, 114, 114); margin-left: 5%;">GET FREE QUOTE</h3>
+        
+        
+        <center>
+      <form action="" style="width: 100%;">
+        
+        <input class="contact-input-types" type="text" placeholder="Name">
+     
+        
+        <input class="contact-input-types"  type="email" placeholder="Email">
+        
+        
+        <textarea class="contact-input-types"  style=" height: 100px;" placeholder="Message"></textarea><br>
+        <button class="contact-input-types" style=" color:  rgb(114, 114, 114)" type="submit">Submit</button>
+      </form>
+    </center>
+    </div>
+    <hr>
+    <br>
+</footer>
+
+
+<div style="background-color: #293952; height: 70px;">
+    <br>
+    <center><p   style=" color: rgb(218, 212, 212);">Copyright © 2023 Inwebicon Software Company All Rights Reserved.</p></center>
+    
+  
+</div>
+
+</body>
+
+</html>
