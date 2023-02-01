@@ -38,6 +38,41 @@
 
 </head>
 <style>
+    .preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeout 6s linear forwards;
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #293446;
+  border-top-color: #eb6235;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
     body {
     margin: 0;
     font-family: 'Courier New', Courier, ;
@@ -370,6 +405,10 @@ box-shadow: 0px 0px 3px 2px whitesmoke;
 
 
 <body>
+    <div class="preloader">
+  <div class="loader"></div>
+</div>
+
 
     <br>
     <center>
