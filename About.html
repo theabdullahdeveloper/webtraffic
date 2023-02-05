@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Traffic-ABOUT</title>
+    <link rel="web icon" type="jpg" href="favicon.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+    @keyframes fadeout {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #293446;
+        border-top-color: #eb6235;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Courier New', Courier, ;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #232C3B;
+
+        opacity: 1;
+        padding-left: 60px;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+
+        background-color: #eb6235;
+        color: #232C3B;
+        font-weight: initial;
+        box-shadow: 0px 0px 5px 2px whitesmoke;
+        transition: 0.8s;
+    }
+
+    a#icons:hover {
+        background-color: #eb6235;
+        color: #232C3B;
+
+        box-shadow: 0px 0px 5px 2px whitesmoke;
+        transition: 0.8s;
+        border-radius: 10%;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        .topnav a:not(:first-child),
+        .dropdown .dropbtn {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .topnav.responsive {
+            position: relative;
+        }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav.responsive .dropdown {
+            float: none;
+        }
+
+        .topnav.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2em;
+        background-color: #232C3B;
+
+    }
+
+    .about,
+    .links,
+    .contact {
+        width: calc(33.33% - 1em);
+        padding: 1em;
+    }
+
+    @media (max-width: 768px) {
+
+        .about,
+        .links,
+        .contact {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    a.footer-links {
+        text-decoration: none;
+
+    }
+
+    a.footer-links:hover {
+        transition: 0.5s;
+        color: #ffffff;
+    }
+
+    input.contact-input-types,
+    textarea.contact-input-types,
+    button.contact-input-types {
+        border-radius: 10px;
+        border: solid #293446;
+        background-color: #232C3B;
+        width: 90%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+
+    input.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    textarea.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    button.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    div.about-webtraffic {
+        width: 100%;
+    }
+
+    h1.about-headings {
+        color: #293446;
+        font-weight: bold;
+    }
+
+    /* p.seo-para{color: rgb(114, 114, 114);} */
+    h3.about-sub-headings {
+        color: #293446;
+        font-weight: bold;
+    }
+    
+
+</style>
+
+
+
+<body>
+    <div>
+
+        <div class="alert alert-danger alert-dismissible" id="myAlert" >
+          <a href="#" class="close">&times;</a>
+          <center><strong>HELLO!</strong> This page serves as a demonstration only, and the information provided on it is purely fictional.</center>
+        </div>
+      </div>
+      
+      <script>
+      $(document).ready(function(){
+        $(".close").click(function(){
+          $("#myAlert").alert("close");
+        });
+      });
+      </script>
+      
+    <br>
+    <center>
+        <div>
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <br>
+        <br>
+    </center>
+    <center>
+        <div class="container row">
+            <div class="topnav" id="myTopnav"
+                style=" text-align:center;    border-radius: 10px 50px;        margin-bottom: 7px; ">
+
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="index.html">
+                    Solution
+                </a>
+                <a href="index.html">
+                    Services
+                </a>
+                <a href="About.html" style="background-color: #eb6235; color: #293446;"">
+                    About
+                </a>
+                <a href="Policies.html">
+                    Policies
+                </a>
+                <a href="BLOG.html">
+                    Blog
+                </a>
+               
+                <a href="Portfolio.html">
+                      Portfolio
+                </a>
+                <a href="#contact-form">
+                     Contact Us
+                </a>
+                <a href="#" class="fa fa-facebook" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-whatsapp" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-twitter" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-instagram" id="icons" style="margin-top: 5px;"></a>
+                <!-- <a href="#" class="fa fa-youtube" id="icons" style="margin-top: 5px;"></a> -->
+                <a href="#" class="fa fa-snapchat" id="icons" style="margin-top: 5px;"></a>
+
+
+
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+        </div>
+    </center>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <br>
+    <br>
+
+    <div class="container about-webtraffic">
+        <h1 class="about-headings">
+            SEO (Search Engine Optimization)
+        </h1>
+        <br>
+
+
+
+        <p class="seo-para">
+            Search Engine Optimization (SEO) is the practice of optimizing a website in order to rank
+            higher in search engine results pages (SERPs) and drive more organic traffic. In today's digital world, SEO
+            is crucial for businesses and websites that want to be seen and reach their target audience.
+            <br>
+            <br>
+            <br>
+            Here are some of the key elements of SEO:
+
+            <br>
+            <br>
+            <b>
+                1. Keyword research:
+            </b>
+
+            Identifying the right keywords that your target audience is searching for and
+            incorporating them into your website's content, meta tags, and alt tags.
+            <br>
+            <br>
+            <b>
+                2. On-page optimization:
+            </b>
+            Ensuring that your website's pages are optimized for search engines by
+            having a clean and organized structure, with descriptive and keyword-rich URLs, meta descriptions, and
+            header tags.
+            <br>
+            <br>
+            <b>
+                3. Content creation:
+            </b>
+            Creating high-quality, relevant, and keyword-rich content that engages your
+            target audience and provides value. This helps to establish your website as a trusted resource and increase
+            its visibility in search results.
+
+            <br>
+            <br>
+            <b>
+                4. Link building:
+            </b>
+            Earning high-quality backlinks from other websites, which can help to increase your
+            website's credibility and authority in the eyes of search engines.
+            <br>
+            <br>
+            <b>
+                5.Technical SEO:
+
+            </b>
+            Making sure your website is technically sound and optimized for search engines,
+            including mobile responsiveness, site speed, and security.
+            <br>
+            <br>
+            <b>
+                6. Measuring and analyzing results:
+            </b>
+            Continuously measuring and analyzing your website's performance
+            in search results, using tools such as Google Analytics and Search Console, and making data-driven decisions
+            to improve your SEO strategy.
+
+
+            <br>
+            <br>
+            <br>
+
+            SEO is an ongoing process that requires a combination of technical know-how and creativity. It takes time
+            and effort to see results, but the benefits are worth it. A well-optimized website can drive more organic
+            traffic, increase brand visibility, and generate more leads and sales.
+            <br>
+            <br>
+            In conclusion, SEO is an essential aspect of any digital marketing strategy and can greatly impact the
+            success of a website. By
+            following best practices and continuously measuring and optimizing your website's performance, you can
+            increase your visibility in search results and reach your target audience.
+
+
+            <br>
+            <br>
+            <br>
+
+
+        </p>
+
+
+
+        <h3 class="about-sub-headings">
+            TECHNICAL SERVICE:
+        </h3>
+        <br>
+        <br>
+        <p>
+            Technical service refers to the support provided to customers in repairing, maintaining, and resolving
+            issues with products or equipment. Technical service can include troubleshooting, fixing hardware or
+            software problems, and providing advice and guidance on how to use products effectively.
+            <br>
+            <br>
+            In today's fast-paced and technology-dependent world, technical service has become an integral part of most
+            businesses,
+            whether they are selling physical products or offering digital services. Technical service can be provided
+            in various forms, including phone support, email support, online chat, and in-person service.
+            <br>
+            <br>
+            Here are some of the key benefits of technical service:
+            <br>
+            <br>
+            <b>
+                1. Customer satisfaction:
+            </b>
+            Providing effective technical service can help to build trust and
+            confidence in a business, leading to increased customer satisfaction and loyalty.
+
+            <br>
+            <br>
+            <b>
+                2. Problem resolution:
+            </b>
+            Technical service helps to quickly resolve problems and ensure that products
+            are functioning properly, reducing frustration and downtime for customers.
+
+            <br>
+            <br>
+            <b>
+                3.Increased efficiency:
+            </b>
+            By providing technical service, businesses can increase the efficiency of
+            their products and reduce the time and resources required to resolve issues.
+
+            <br>
+            <br>
+            <b>
+                4. Competitive advantage:
+            </b>
+            Offering comprehensive and effective technical service can help businesses
+            to stand out from their competitors and differentiate themselves in a crowded marketplace.
+
+            <br>
+            <br>
+            <b>
+                5. Cost savings:
+            </b>
+            Providing technical service can help to reduce the costs associated with repairing
+            products, as well as reducing the costs of replacements and returns.
+
+
+
+
+
+
+
+
+        </p>
+
+        <br><br>
+
+
+
+
+
+        <h3 class="about-sub-headings">
+            KEYWORD TARGETING:
+        </h3>
+        <br>
+        <br>
+        <p>
+            Keyword targeting is the process of identifying and optimizing for specific keywords and phrases in order to
+            rank higher in search engine results pages (SERPs) and drive more organic traffic to a website. Keyword
+            targeting is an important aspect of search engine optimization (SEO) and is a key factor in determining a
+            website's visibility and success in search results.
+            <br>
+            <br>
+            Here are some of the key elements of keyword targeting:
+            <br>
+            <br>
+            <b>
+                1. Keyword research:
+            </b> The first step in keyword targeting is to identify the keywords and phrases that
+            your target audience is searching for. This can be done through various tools and methods, including keyword
+            research tools, competitor analysis, and customer feedback.
+            <br>
+            <br>
+            <b>
+                2. On-page optimization:
+            </b>
+            Once you have identified the keywords to target, the next step is to
+            optimize your website's pages for those keywords. This can include incorporating the keywords into the
+            content, meta tags, and alt tags on your pages.
+            <br>
+            <br>
+            <b>
+                3. Content creation:
+            </b>
+            Creating high-quality, relevant, and keyword-rich content is crucial for keyword
+            targeting. This helps to establish your website as a trusted resource for information and increases the
+            chances of ranking for your targeted keywords.
+            <br>
+            <br>
+            <b>
+                4. Competition analysis:
+            </b>
+            Analyzing the competition for your targeted keywords can help to determine
+            the level of difficulty in ranking for those keywords and make informed decisions about your SEO strategy.
+            <br>
+            <br>
+            <b>
+                5. Measuring and analyzing results:
+            </b>
+            Continuously measuring and analyzing your website's performance
+            in search results, using tools such as Google Analytics and Search Console, and making data-driven decisions
+            to improve your keyword targeting strategy.
+            <br>
+            <br>
+            Keyword targeting is an ongoing process that requires a
+            combination of technical knowledge and creativity. It is important to stay up-to-date with changes in search
+            algorithms and trends in keyword search behavior to continually optimize your website for the best results.
+            <br>
+            <br>
+            In conclusion, keyword targeting is a crucial aspect of SEO and can greatly impact the visibility
+            and success of a website in search results. By conducting keyword research, optimizing your website's pages,
+            creating high-quality content, and continuously measuring and analyzing your results, you can effectively
+            target the keywords that will drive the most organic traffic to your website
+            <br>
+            <br>
+
+        </p>
+        <br>
+        <br>
+        <h3 class="about-sub-headings">
+            WEB ANALYTICS:
+        </h3>
+        <br>
+        <br>
+        <p>
+            Web analytics refers to the measurement, collection, analysis, and reporting of data related to a website's traffic and performance. It helps organizations understand how visitors interact with their websites, including which pages they visit, how long they stay, and where they come from.
+            <br>
+<br>
+Web analytics provides valuable insights into website performance and user behavior, allowing businesses to make data-driven decisions about their online presence. For example, if a website's bounce rate is high, it could indicate a problem with the website's content or design, leading to improvements that can increase engagement and conversions.
+
+<br>
+<br>
+There are various web analytics tools available, ranging from free and open-source options to paid enterprise solutions. These tools typically track and measure key performance indicators (KPIs) such as pageviews, unique visitors, and conversion rates, and provide detailed reports and visualizations of the data.
+
+<br>
+<br>
+In conclusion, web analytics plays a crucial role in the success of any online business by providing valuable insights into website performance and user behavior. It helps organizations make data-driven decisions to optimize their online presence and improve their overall results.
+
+
+
+<br>
+<br>There are various web analytics tools available, ranging from free and open-source options to paid enterprise solutions. These tools typically track and measure key performance indicators (KPIs) such as pageviews, unique visitors, and conversion rates, and provide detailed reports and visualizations of the data.
+
+<br>
+<br>
+In conclusion, web analytics plays a crucial role in the success of any online business by providing valuable insights into website performance and user behavior. It helps organizations make data-driven decisions to optimize their online presence and improve their overall results.
+
+
+
+<br>
+<br>
+        </p>
+        <br>
+        <br>
+        <h3 class="about-sub-headings">
+            SUPPORT CENTER:
+        </h3>
+        <br>
+        <br>
+        <p>
+            A support center is a centralized resource that provides assistance and support to customers or users of a product or service. The goal of a support center is to resolve customer issues quickly and effectively, improving customer satisfaction and loyalty.
+
+<br>
+<br>
+Support centers typically offer a range of support options, such as phone, email, live chat, and self-service resources such as FAQs and knowledge bases. These resources are designed to help customers quickly find the information they need and resolve any issues they may have.
+<br>
+<br>
+A well-designed support center should be easy to use and navigate, with clear and concise information that is easy for customers to understand. Additionally, support centers should have robust tracking and reporting systems to monitor the effectiveness of their support operations and identify areas for improvement.
+<br>
+<br>
+In addition to resolving customer issues, support centers can also play a key role in customer engagement and retention. By providing personalized and effective support, support centers can foster a positive customer experience, building trust and loyalty.
+
+<br>
+<br>
+Overall, a support center is a critical component of any business that wants to provide a high level of customer support and satisfaction. By offering comprehensive support resources and tracking customer interactions, businesses can ensure that their customers receive the support they need to be successful.
+<br><br>  A support center is a centralized resource that provides assistance and support to customers or users of a product or service. The goal of a support center is to resolve customer issues quickly and effectively, improving customer satisfaction and loyalty.
+
+<br>
+<br>
+Support centers typically offer a range of support options, such as phone, email, live chat, and self-service resources such as FAQs and knowledge bases. These resources are designed to help customers quickly find the information they need and resolve any issues they may have.
+<br>
+<br>
+A well-designed support center should be easy to use and navigate, with clear and concise information that is easy for customers to understand. Additionally, support centers should have robust tracking and reporting systems to monitor the effectiveness of their support operations and identify areas for improvement.
+<br>
+<br>
+In addition to resolving customer issues, support centers can also play a key role in customer engagement and retention. By providing personalized and effective support, support centers can foster a positive customer experience, building trust and loyalty.
+
+<br>
+<br>
+Overall, a support center is a critical component of any business that wants to provide a high level of customer support and satisfaction. By offering comprehensive support resources and tracking customer interactions, businesses can ensure that their customers receive the support they need to be successful.
+<br><br>
+
+
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="about">
+            <br>
+            <img src="logo-footer.png" alt="">
+            <br>
+            <br>
+
+
+            <p style="color: rgb(114, 114, 114); font-size: small;">
+                Aoluptas sit aspernatur aut odit aut fugit, sed elits quias consequuntur magni dolores eos qui ratione
+                volust luptatem sequi nesciunt.
+
+            </p>
+            <br>
+            <br>
+
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-map-marker"></i> &nbsp Rahim Yar
+                Khan,Punjab, Pakistan. </p>
+            <hr>
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-envelope">
+                </i> &nbspInwebicon@gmai.com </p>
+            <hr>
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-phone"></i>
+                </i> &nbsp+92 325 1136814</p>
+
+        </div>
+        <div class="links" style="color: rgb(114, 114, 114);font-size: small;">
+            <br>
+            <h3>SERVICE PROVIDED</h3>
+            <br>
+            <a class="footer-links" href="#"> > SEO Services</a><br> <br>
+            <a class="footer-links" href="#"> > Social Media</a><br> <br>
+            <a class="footer-links" href="#"> > Web Developement</a><br> <br>
+            <a class="footer-links" href="#"> > Blog Management</a><br> <br>
+            <a class="footer-links" href="#"> > Keyword Analytics</a><br> <br>
+            <a class="footer-links" href="#"> > Content Management</a><br> <br>
+            <a class="footer-links" href="#"> > Pay per click</a><br> <br>
+            <a class="footer-links" href="#"> > Virtual Marketing</a><br>
+
+
+        </div>
+        <div  id="contact-form"  class="contact" style="margin-top: 20px;">
+
+            <h3 style="color: rgb(114, 114, 114); margin-left: 5%;">GET FREE QUOTE</h3>
+
+
+            <center>
+                <form action="" style="width: 100%;">
+
+                    <input class="contact-input-types" type="text" placeholder="Name">
+
+
+                    <input class="contact-input-types" type="email" placeholder="Email">
+
+
+                    <textarea class="contact-input-types" style=" height: 100px;" placeholder="Message"></textarea><br>
+                    <button class="contact-input-types" style=" color:  rgb(114, 114, 114)"
+                        type="submit">Submit</button>
+                </form>
+            </center>
+        </div>
+        <hr>
+        <br>
+    </footer>
+
+
+    <div style="background-color: #293952; height: 70px;">
+        <br>
+        <center>
+            <p style=" color: rgb(218, 212, 212);">Copyright © 2023 Inwebicon Software Company All Rights Reserved.</p>
+        </center>
+
+
+    </div>
+  
+</body>
+
+</html>

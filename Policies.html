@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Traffic-POLOCIES</title>
+    <link rel="web icon" type="jpg" href="favicon.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+    @keyframes fadeout {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #293446;
+        border-top-color: #eb6235;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Courier New', Courier, ;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #232C3B;
+
+        opacity: 1;
+        padding-left: 60px;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+
+        background-color: #eb6235;
+        color: #232C3B;
+        font-weight: initial;
+        box-shadow: 0px 0px 5px 2px whitesmoke;
+        transition: 0.8s;
+    }
+
+    a#icons:hover {
+        background-color: #eb6235;
+        color: #232C3B;
+
+        box-shadow: 0px 0px 5px 2px whitesmoke;
+        transition: 0.8s;
+        border-radius: 10%;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        .topnav a:not(:first-child),
+        .dropdown .dropbtn {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .topnav.responsive {
+            position: relative;
+        }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav.responsive .dropdown {
+            float: none;
+        }
+
+        .topnav.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2em;
+        background-color: #232C3B;
+
+    }
+
+    .about,
+    .links,
+    .contact {
+        width: calc(33.33% - 1em);
+        padding: 1em;
+    }
+
+    @media (max-width: 768px) {
+
+        .about,
+        .links,
+        .contact {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    a.footer-links {
+        text-decoration: none;
+
+    }
+
+    a.footer-links:hover {
+        transition: 0.5s;
+        color: #ffffff;
+    }
+
+    input.contact-input-types,
+    textarea.contact-input-types,
+    button.contact-input-types {
+        border-radius: 10px;
+        border: solid #293446;
+        background-color: #232C3B;
+        width: 90%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+
+    input.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    textarea.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    button.contact-input-types:focus {
+        /* border: 3px solid #eb6235; */
+        transition: 0.8s;
+
+        box-shadow: 0px 0px 3px 2px whitesmoke;
+    }
+
+    div.polices-webtraffic {
+        width: 100%;
+
+    }
+
+    h1.heading {
+        color: #293446;
+        font-weight: bold;
+
+    }
+
+    h4.sub-heading {
+        color: #293446;
+        font-weight: lighter;
+    }
+</style>
+
+
+
+<body>
+    <div>
+
+        <div class="alert alert-danger alert-dismissible" id="myAlert">
+            <a href="#" class="close">&times;</a>
+            <center><strong>HELLO!</strong> This page serves as a demonstration only, and the information provided on it
+                is purely fictional.</center>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".close").click(function () {
+                $("#myAlert").alert("close");
+            });
+        });
+    </script>
+
+    <br>
+    <center>
+        <div>
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+
+        <br>
+
+        <br>
+    </center>
+    <center>
+        <div class="container row">
+            <div class="topnav" id="myTopnav"
+                style=" text-align:center;    border-radius: 10px 50px;        margin-bottom: 7px; ">
+
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="index.html">
+                    Solution
+                </a>
+                <a href="index.html">
+                    Services
+                </a>
+                <a href="About.html">
+                    About
+                </a>
+                <a href="#" style="background-color: #eb6235; color: #293446;">
+                    Policies
+                </a>
+                <a href="BLOG.html">
+                    Blog
+                </a>
+                
+                <a href="Portfolio.html">
+                    Portfolio
+                </a>
+                <a href="#contact-form">
+                    Contact Us
+                </a>
+                <a href="#" class="fa fa-facebook" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-whatsapp" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-twitter" id="icons" style="margin-top: 5px;"></a>
+                <a href="#" class="fa fa-instagram" id="icons" style="margin-top: 5px;"></a>
+                <!-- <a href="#" class="fa fa-youtube" id="icons" style="margin-top: 5px;"></a> -->
+                <a href="#" class="fa fa-snapchat" id="icons" style="margin-top: 5px;"></a>
+
+
+
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+        </div>
+    </center>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <br>
+    <div class="container polices-webtraffic">
+        <br>
+        <center>
+            <h1 class="heading">
+                Terms and Conditions:
+            </h1>
+        </center>
+        <br>
+        <h4 class="sub-heading">
+            1. Introduction and scope
+        </h4>
+        <br>
+        <p class="paragraph">"Introduction and scope" is typically the first section of a legal agreement, such as terms
+            and conditions or a privacy policy.
+            <br>
+            <br>
+
+            Introduction: The introduction provides a brief overview of the purpose of the agreement and the parties
+            involved. It sets the stage for the rest of the document and helps the reader understand the context in
+            which the agreement is being made.
+            <br>
+            <br>
+
+            Scope: The scope section defines the boundaries of the agreement and specifies what the agreement covers and
+            what it does not cover. This section helps to clarify the expectations of the parties and ensure that both
+            parties have a common understanding of the agreement's purpose. The scope section may also outline any
+            limitations or exclusions that apply to the agreement.
+            <br>
+            <br>
+
+            Together, the introduction and scope help to establish a clear and comprehensive framework for the
+            agreement, making it easier for the parties to understand their rights and obligations.
+            <br>
+            <br>
+        </p>
+        <br>
+        <h4 class="sub-heading">
+            2. Definition of terms
+
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Definition of terms" section is a section in a legal agreement that defines and
+            explains key terms used throughout the document. This section provides clarity and ensures that all parties
+            have a common understanding of the meaning of specific terms and phrases used in the agreement.
+            <br>
+            <br>
+
+            The definition of terms section is particularly useful in complex agreements where specific terms have
+            specific meanings that are unique to the agreement. By defining the terms, the parties can avoid
+            misunderstandings and disputes down the line.
+            <br>
+            <br>
+
+            The definition of terms section may include a list of terms and definitions, or it may include definitions
+            as the terms are used throughout the agreement. The terms defined in this section can include technical
+            terms, legal terms, and any other terms that are specific to the agreement.
+            <br>
+            <br>
+
+            In summary, the definition of terms section helps to ensure that the agreement is clear and unambiguous, and
+            it reduces the risk of misunderstandings and disputes between the parties.
+            <br>
+            <br>
+        </p>
+
+        <br>
+        <h4 class="sub-heading">
+            3. Support and Maintenance
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Support and maintenance" section in a legal agreement, such as terms and conditions or
+            a software license agreement, outlines the level and type of support and maintenance that will be provided
+            to the customer.
+            <br>
+            <br>
+            Support refers to the assistance that the software company will provide to the customer in resolving any
+            issues or problems that arise with the software. This may include troubleshooting, problem resolution, and
+            technical support.
+            <br>
+            <br>
+
+            Maintenance refers to the ongoing updates, bug fixes, and other improvements that the software company will
+            provide to ensure that the software continues to function properly and effectively.
+            <br>
+            <br>
+
+            In summary, the support and maintenance section of a legal agreement helps to establish the level and type
+            of support and maintenance that will be provided to the customer, and it helps to ensure that the customer
+            has a clear understanding of what to expect from the software company.
+            <br>
+            <br>
+        </p>
+
+
+        <br>
+        <h4 class="sub-heading">
+
+            4. Governing law and Jurisdiction
+        </h4>
+        <br>
+        <p class="paragraph">The "Governing law and jurisdiction" section in a legal agreement sets out the law that
+            will govern the agreement and the jurisdiction in which disputes arising from the agreement will be
+            resolved.
+            <br>
+            <br>
+            Governing law: This section specifies the law that will be used to interpret and enforce the agreement. The
+            governing law may be the law of a particular country, state, or province. For example, if the parties are
+            located in different countries, they may choose to have the agreement governed by the law of the country in
+            which the software company is located.
+            <br>
+            <br>
+
+            Jurisdiction: This section specifies the court or tribunal that will have jurisdiction to hear disputes
+            arising from the agreement. For example, the parties may agree that disputes will be resolved in a
+            particular country, state, or province.
+            <br>
+            <br>
+
+            The governing law and jurisdiction section of a legal agreement is important because it helps to ensure that
+            the parties have a clear understanding of the law that will apply to the agreement and the court or tribunal
+            that will have the power to hear any disputes that may arise.
+            <br>
+            <br>
+        </p>
+        <br>
+        <h4 class="sub-heading">
+            5. Warranty Disclaimer
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Warranty disclaimer" section in a legal agreement is a statement that limits or excludes the warranties
+            provided by the software company. This section is used to clarify the parties' expectations with respect to
+            the quality and performance of the software.
+
+            <br>
+            <br>
+
+            A warranty disclaimer typically includes a statement that the software is provided "as is" and that the
+            software company makes no representations or warranties regarding the software's quality, performance, or
+            suitability for a particular purpose. The warranty disclaimer may also include a statement that the software
+            company does not warrant that the software will be error-free or that all errors will be corrected.
+
+            <br>
+            <br>
+
+            The purpose of a warranty disclaimer is to limit the liability of the software company in the event that the
+            software does not perform as expected. By including a warranty disclaimer, the software company is able to
+            reduce the risk of legal disputes and minimize its exposure to liability.
+
+            <br>
+            <br>
+            In summary, the warranty disclaimer section helps to establish clear expectations with respect to the
+            quality and performance of the software, and it helps to limit the liability of the software company in the
+            event that the software does not perform as expected.
+            <br>
+            <br>
+        </p>
+
+        <br>
+        <center>
+            <h1 class="heading">
+                Privacy Policy:
+            </h1>
+        </center>
+        <br>
+        <h4 class="sub-heading">
+            1. Use of information
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Use of information" section in a legal agreement sets out the rules and restrictions on the use of
+            information collected, processed, or stored by the software.
+            <br>
+            <br>
+            This section may include provisions regarding:
+            <br>
+            <br>
+            1. Confidentiality: The agreement may require that the software company keep any confidential information
+            collected from the customer confidential and not disclose it to any third party.
+            <br>
+            <br>
+            2. Data security: The agreement may require the software company to implement appropriate security measures
+            to protect any information collected, processed, or stored by the software.
+            <br>
+            <br>
+
+            3. Data protection: The agreement may include provisions regarding the collection, processing, and storage
+            of personal data, and may require the software company to comply with applicable data protection laws.
+            <br>
+            <br>
+            4. Data ownership: The agreement may specify who owns the information collected, processed, or stored by the
+            software, and may set out the rights and obligations of each party with respect to the information.
+            <br>
+            <br>
+            5. Data sharing: The agreement may specify the conditions under which the software company may share any
+            information collected, processed, or stored by the software with third parties.
+            <br>
+            <br>
+        </p>
+
+
+        <br>
+        <h4 class="sub-heading">
+            2. Your Rights
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Your rights" section in a legal agreement sets out the rights and privileges that the customer has with
+            respect to the software.
+            <br>
+            <br>
+            This section may include provisions regarding:
+            <br>
+            <br>
+            1. Use of the software: The agreement may specify the conditions under which the customer is allowed to use
+            the software, including the number of users, the duration of the license, and any limitations on the use of
+            the software.
+            <br>
+            <br>
+            2. Upgrades and maintenance: The agreement may specify the software company's obligations with respect to
+            providing upgrades and maintenance for the software, and may set out the customer's rights to receive these
+            services.
+            <br>
+            <br>
+
+            3. Customer support: The agreement may specify the software company's obligations with respect to providing
+            customer support, and may set out the customer's rights to receive this support.
+            <br>
+            <br>
+            4. Termination: The agreement may set out the conditions under which the customer may terminate the
+            agreement and the consequences of termination.
+            <br>
+            <br>
+            5. Refunds: The agreement may set out the conditions under which the customer may be entitled to a refund
+            and the amount of the refund.
+            <br>
+            <br>
+            The Your rights section is important because it helps to ensure that the customer has a clear understanding
+            of the rights and privileges that they have with respect to the software.
+            <br>
+            <br>
+        </p>
+
+
+        <br>
+        <h4 class="sub-heading">
+            3. Information collected
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Information collected" section in a legal agreement sets out what information the software company
+            collects and processes about the customer.
+            <br>
+            <br>
+            This section may include provisions regarding:
+            <br>
+            <br>
+            1. Types of information: The agreement may specify the types of information that the software company
+            collects, such as personal data, usage data, and device information.
+            <br>
+            <br>
+            2. Purpose of collection: The agreement may specify the purpose of the information collection, such as to
+            provide the customer with a personalized experience, to improve the software, or to comply with legal
+            requirements.
+            <br>
+            <br>
+
+            3. Method of collection: The agreement may specify the method of information collection, such as through the
+            software or through cookies.
+            <br>
+            <br>
+            4. Storage and processing: The agreement may specify where the information is stored and processed, and may
+            set out the software company's obligations with respect to the security and protection of the information.
+
+
+            <br>
+            <br>
+            5. Sharing of information: The agreement may specify the conditions under which the software company may
+            share the information with third parties.
+            <br>
+            <br>
+            The information collected section is important because it helps to ensure that the customer has a clear
+            understanding of what information is collected by the software company and how the information will be used.
+            <br>
+            <br>
+        </p>
+        <br>
+        <h4 class="sub-heading">
+            4. Changes to the privacy policy
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Changes to the privacy policy" section in a legal agreement sets out the process for making changes to
+            the privacy policy and the notice that will be provided to the customer in the event of such changes.
+            <br>
+            <br>
+            This section may include provisions regarding:
+            <br>
+            <br>
+            1. Right to make changes: The agreement may specify that the software company has the right to make changes
+            to the privacy policy at any time.
+            <br>
+            <br>
+            2. Notice of changes: The agreement may require that the software company provide notice of any changes to
+            the privacy policy, such as through an update to the agreement or through an email to the customer.
+            <br>
+            <br>
+
+            3. Effective date of changes: The agreement may specify the effective date of any changes to the privacy
+            policy and may require that the customer review the changes prior to continuing to use the software.
+            <br>
+            <br>
+            4. Continuing to use the software: The agreement may specify that continued use of the software after any
+            changes to the privacy policy constitutes acceptance of the changes.
+
+
+            <!-- <br>
+            <br>
+            5. Sharing of information: The agreement may specify the conditions under which the software company may share the information with third parties. -->
+            <br>
+            <br>
+            The changes to the privacy policy section is important because it helps to ensure that the customer is
+            informed of any changes to the privacy policy and that the rights and obligations of each party with respect
+            to the privacy policy are clearly defined.
+            <br>
+            <br>
+        </p>
+        <br>
+        <h4 class="sub-heading">
+            5. Contact information
+        </h4>
+        <br>
+        <p class="paragraph">
+            The "Contact information" section in a legal agreement sets out the contact details for the software
+            company, including its address, phone number, and email address.
+            <br>
+            <br>
+            This section may include provisions regarding:
+            <br>
+            <br>
+            1. Contact details: The agreement may specify the contact details for the software company, such as its
+            address, phone number, and email address.
+            <br>
+            <br>
+            2. Purpose of contact: The agreement may specify the purpose of the contact, such as to receive customer
+            support, to provide feedback, or to report a violation of the agreement.
+            <br>
+            <br>
+
+            3. Response time: The agreement may specify the expected response time for any inquiries or requests
+            submitted to the software company.
+            <br>
+            <br>
+
+            The contact information section is important because it provides the customer with the necessary information
+            to get in touch with the software company in the event of a question, concern, or issue.
+
+            <br>
+            <br>
+        </p>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="about">
+            <br>
+            <img src="logo-footer.png" alt="">
+            <br>
+            <br>
+
+
+            <p style="color: rgb(114, 114, 114); font-size: small;">
+                Aoluptas sit aspernatur aut odit aut fugit, sed elits quias consequuntur magni dolores eos qui ratione
+                volust luptatem sequi nesciunt.
+
+            </p>
+            <br>
+            <br>
+
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-map-marker"></i> &nbsp Rahim Yar
+                Khan,Punjab, Pakistan. </p>
+            <hr>
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-envelope">
+                </i> &nbspInwebicon@gmai.com </p>
+            <hr>
+            <p style="color: rgb(114, 114, 114); font-size: small;"><i class="fa fa-phone"></i>
+                </i> &nbsp+92 325 1136814</p>
+
+        </div>
+        <div class="links" style="color: rgb(114, 114, 114);font-size: small;">
+            <br>
+            <h3>SERVICE PROVIDED</h3>
+            <br>
+            <a class="footer-links" href="#"> > SEO Services</a><br> <br>
+            <a class="footer-links" href="#"> > Social Media</a><br> <br>
+            <a class="footer-links" href="#"> > Web Developement</a><br> <br>
+            <a class="footer-links" href="#"> > Blog Management</a><br> <br>
+            <a class="footer-links" href="#"> > Keyword Analytics</a><br> <br>
+            <a class="footer-links" href="#"> > Content Management</a><br> <br>
+            <a class="footer-links" href="#"> > Pay per click</a><br> <br>
+            <a class="footer-links" href="#"> > Virtual Marketing</a><br>
+
+
+        </div>
+        <div  id="contact-form"  class="contact" style="margin-top: 20px;">
+
+            <h3 style="color: rgb(114, 114, 114); margin-left: 5%;">GET FREE QUOTE</h3>
+
+
+            <center>
+                <form action="" style="width: 100%;">
+
+                    <input class="contact-input-types" type="text" placeholder="Name">
+
+
+                    <input class="contact-input-types" type="email" placeholder="Email">
+
+
+                    <textarea class="contact-input-types" style=" height: 100px;" placeholder="Message"></textarea><br>
+                    <button class="contact-input-types" style=" color:  rgb(114, 114, 114)"
+                        type="submit">Submit</button>
+                </form>
+            </center>
+        </div>
+        <hr>
+        <br>
+    </footer>
+
+
+    <div style="background-color: #293952; height: 70px;">
+        <br>
+        <center>
+            <p style=" color: rgb(218, 212, 212);">Copyright © 2023 Inwebicon Software Company All Rights Reserved.</p>
+        </center>
+
+
+    </div>
+
+</body>
+
+</html>
