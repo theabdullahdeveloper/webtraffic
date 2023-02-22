@@ -883,13 +883,13 @@
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var message = document.getElementById('message').value;
-            var body = 'name: ' + name + '<br/> email :' + email + '<br/> message :' + message;
+            var body = 'Name: ' + name + '<br/> Email :' + email + '<br/> Message :' + message;
 
             Email.send({
                 SecureToken: "df23508c-4b3e-4958-b4f0-3c3ffb512e78",
                 To: 'abdullahofficial116@gmail.com',
-                From: "you@isp.com",
-                Subject: "Contact Message",
+                From: "abdullahofficial116@gmail.com",
+                Subject: "Contact Message From Web Traffic",
                 Body: body
             }).then(
                 message => alert(message)
